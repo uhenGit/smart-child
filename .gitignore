@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+/modules/__pycache__
+/templates/test.html
+/static/script/helpers.js

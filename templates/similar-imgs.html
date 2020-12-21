@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<article class="h4 text-primary text-center">
+		<p>On this page You have to find two similar images</p>
+	</article>
+	<div class="modal fade" id="resultModal-similar">
+		<div class="modal-dialog" style="margin-top: 3rem;">
+			<div class="modal-container jumbotron">
+				<div class="modal-body">
+					<div class="msg"></div>
+				</div>
+				<button type="button" class="btn btn-success close_modal_similar" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	<div class="gallery row justify-content-center px-2 py-2">
+		{% if array %}
+			{% for el in array: %}
+				<img src={{ url_for('static', filename="imgs/leaves/leaf-"+el+".svg") }} class="rand_imgs col-4 mx-2 my-2 py-1" alt="random leaf"/>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<script src="{{url_for('static', filename='script/similar.js')}}" defer></script>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<article class="h4 text-primary text-center">
+		<p>Here You can <span class="text-danger">add</span>, <span class="text-warning">subtract</span>, <span class="text-secondary">divide</span> and <span class="text-success">multiply</span> numbers</p>
+	</article>
+	<div class="modal fade" id="resultModal-math">
+		<div class="modal-dialog" style="margin-top: 3rem;">
+			<div class="modal-container jumbotron">
+				<div class="modal-body">
+					<div class="msg"></div>
+				</div>
+				<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	<form class="jumbotron container">
+		<div class="d-flex flex-md-row flex-column justify-content-around">
+			<div class="badge badge-primary text-wrap">
+				<p class="h3">It is the first number:</p>
+				<p class="firstNum h3">5</p>
+			</div>
+			<p class="sign btn btn-warning mb-3 mt-3"><span class="h1 signContent">+</span></p>
+			<div class="badge badge-info text-wrap">
+				<p class="h3">It is the second number:</p>
+				<p class="secondNum h3">2</p>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<label class="form-group text-center mt-3">
+				<span class="h3">Your answer:</span>
+				<input class="answer form-control form-control-lg mt-2" data-toggle="popover" data-content="Only numbers, please!" data-placement="top" type="text" name="answer"/>
+			</label>
+		</div>
+		<div class="row justify-content-center">
+			<input class="btn btn-success form-control form-control-lg" type="submit" name="submit" value="Check!"/>
+		</div>
+	</form>
+	<script src="{{url_for('static', filename='script/math.js')}}" defer></script>
+{% endblock %}

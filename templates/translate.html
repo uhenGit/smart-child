@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<article class="h4 text-primary text-center">
+		<p>On this page You can do some exercises with translations.</p>
+		<p>Choose the language and You'll the word You have to transalte</p>
+	</article>
+	<div class="modal fade" id="resultModal-translate">
+		<div class="modal-dialog" style="margin-top: 3rem;">
+			<div class="modal-container jumbotron">
+				<div class="modal-body">
+					<div class="msg"></div>
+				</div>
+				<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	<form class="container jumbotron">
+		<div class="d-flex justify-content-around">
+			<label class="form-group ml-3 radio_lang">
+				<span>RU</span>
+				<input class="form-control mt-2" type="radio" name="langToggler" value="rus"/>
+			</label>
+			<label class="form-group mr-3 radio_lang">
+				<span>EN</span>
+				<input class="form-control mt-2" type="radio" name="langToggler" value="eng"/>
+			</label>			
+		</div>
+		<div class="overlay_wrap">
+			<div class="overlay" title="select the language first"></div>
+			<h3 class="text-light bg-dark text-center pt-3 pb-3">To start select the language above</h3>	
+			<div class="d-flex flex-column justify-content-around">
+				<div class="form-group text-center">
+					<span class="h3">Translate This:</span>
+					<p class="form-control mt-2">{% if data %}{{data}}{% endif %}</p>
+				</div>
+				<label class="form-group text-center">
+					<span class="h3">Type Here:</span>
+					<input class="form-control mt-2" type="text" name="answer" value="" placeholder="Your answer"/>
+				</label>
+				<input class="btn btn-warning form-control" type="submit" name="submit" value="CHECK"/>
+			</div>
+		</div>
+	</form>
+	<script src="{{url_for('static', filename='script/translate.js')}}"></script>
+{% endblock %}

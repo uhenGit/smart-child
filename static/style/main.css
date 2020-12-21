@@ -1,0 +1,35 @@
+.line {
+    width: 20px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.nav_mobile ul li {
+    font-size: 1.5rem;
+}
+.radio_lang {
+    cursor: pointer;
+}
+.overlay_wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.rand_imgs {
+    border: 2px dotted rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.rand_imgs:hover {
+    background-color: rgba(240, 237, 69, 0.4);
+}
+.checked {
+    border: 5px solid rgba(200, 100, 100, 0.7);
+}
