@@ -2,7 +2,6 @@ const version = "v_1";
 const cachedFiles = [
     './static/script/index.js',
     './static/script/math.js',
-    './static/script/test.js',
 
 ];
 
