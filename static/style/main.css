@@ -4,6 +4,7 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 .nav_mobile ul li {
+    padding: 1.5rem 0;
     font-size: 1.5rem;
 }
 .radio_lang {
@@ -23,6 +24,7 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 .rand_imgs {
+    width: 100%;
     border: 2px dotted rgba(0, 0, 0, 0.7);
     cursor: pointer;
     transition-duration: 300ms;

@@ -2,6 +2,11 @@ const version = "v_1";
 const cachedFiles = [
     './static/script/index.js',
     './static/script/math.js',
+    './static/script/bootstrap.min.js',
+    './static/script/jquery-3.5.1.slim.min.js',
+    './static/script/popper.min.js',
+    './static/script/similar.js',
+    './static/script/translate.js',
 
 ];
 

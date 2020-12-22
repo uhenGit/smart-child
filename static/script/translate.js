@@ -74,7 +74,7 @@ const checkLang = (item) => {
 // Get answer from form
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	const answer = document.querySelector('input[name="answer"]').value;
+	const answer = document.querySelector('input[name="answer"]').value.toLowerCase();
 	sendForm(answer);
 })
 
